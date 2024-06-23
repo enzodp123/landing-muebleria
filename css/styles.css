@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --text:#2a2528;
+
+}
+
+body{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+ /*ENCABEZADO*/
+
+.encabezado{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 100;
+}
+
+.encabezado-h1{
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.encabezado-nav{
+    display: flex;
+    width: auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.encabezado-lista{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.link{
+    display: flex;
+    padding: 0px 20px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.link-btn{
+    color: var(--text);
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*ANIMACIN SCROLL HEADER*/
+
+.efe{
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+
+}
+
+/*SECCION INICIO*/
+
+#inicio{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vb;
+    place-content: center;
+    align-items: center;
+    background-image: url(../img/fondo-inicio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.inicio-h2{
+    font-size: 45px;
+    letter-spacing: 3px;
+    text-align: center;
+    padding: 20px;
+    color: #17191a;
+    font-weight: 600;
+    background-color: rgba(73, 69, 64, 0.075);
+    backdrop-filter: blur(2px);
+    border-radius: 30px;
+}
+
+.inicio-p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+    color: var(--text);
+    text-align: center;
+}
+
+/* SECCION CATALOGO*/ 
+
+#catalogo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 115vb;
+}
+
+.catalogo-h2{
+    font-size: 33px;
+    text-align: center;
+    padding: 33px;
+}
+.container-grid{
+    display: grid;
+    height: 100vb;
+    justify-items: center;
+    align-items : center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.producto-img{
+    position: relative;
+    width: 420px;
+    border-radius: 30px;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.2s;
+}
+
+.producto-img:hover{
+    position: relative;
+    transform: scale(1.03);
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto_1-h3{
+    font-size: 22px;
+    padding: 11px;
+}
+
+.producto_1-p{
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 18px;
+}
+
+.producto_1-precio{
+    font-size: 19px;
+    text-decoration: underline 1px;
+}
+
+/*SOBRE NOSOTROS*/
+
+#nosotros{
+    display: flex;
+    width: 100%;
+    height: 30vb;
+    flex-direction: column;
+    background-color: #6e5b40;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#nosotros h2{
+    color: white;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+#nosotros p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+/*CONTACTOS*/
+
+#contacto{
+    background-color: rgb(85, 69, 49);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+#contacto h2{
+    color: #dfdace;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+#contacto p{
+    color:#dfdace ;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#contacto address {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    padding: 4px;
+    letter-spacing: 
+    1px;
+    font-weight: 600;
+    text-align: center;
+    padding-left: 40px;
+    line-height: 23px;
+}
+#contacto address div{
+    padding: 3px;
+    display: flex;
+    place-content: left;
+}
+#contacto address img{
+    width: 25px;
+}
+
+/*PIE DE PAG*/
+
+footer{
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #2a2528;
+    color: #dfdace;
+}
+
+/*FUMADO*/
+
+
+#contacto .blur-2{
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+    width: 103%;
+    border-radius: none;
+    height: 30px;
+    bottom: -30px;
+}
+.blur{
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+    width: 100%;
+    border-radius: none;
+    height: 30px;
+    bottom: -30px;
+}
